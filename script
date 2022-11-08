@@ -1,0 +1,25 @@
+if game.PlaceId == 9872472334 then
+    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+    local Window = Library.CreateLib("Evade GUI", "Ocean")
+
+--tabs and sections
+    local Main = Window:NewTab("Main")
+    local MainSection = Main:NewSection("Main")
+    local Info = Window:NewTab("Info")
+    local InfoSection = Info:NewSection("Info")
+
+--label
+    InfoSection:NewLabel("Made By Lux#1663")
+    InfoSection:NewLabel("Join The Lunar U discord now :)")
+    InfoSection:NewLabel("https://discord.gg/9DNVsuAyfq")
+    InfoSection:NewLabel("type discord in")
+
+    MainSection:NewSlider("Walkspeed", "Zoom Zoom Evade fun", 500, 1, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+MainSection:NewSlider("JumpPower", "jump jump Evade fun", 250, 15, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+end
